@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=3.0">
+    <title>Generación de Reportes</title>
+    <link rel="stylesheet" href="CSS/repo.css">
+    <link rel="stylesheet" href="CSS/Principal.css">
+    <link rel="stylesheet" href="CSS/Menú.css">
+</head>
+
+<body>
+    <table border="0" width="100%" align="center" class="fond">
+        <tr>
+          <td colspan="1" align="left">
+            <br />
+            <img
+              src="Imágenes/Logo.png"
+              width="100px"
+              height="100px"
+              class="img8"
+            />
+          </td>
+          <td align="right">
+            <div>
+              <a href="index.html">
+                <button class="button1">Cerrar Sesión</button>
+              </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+          </td>
+        </tr>
+      </table>
+      <hr>
+      <br><br><br><br><br><br>
+    <div class="container">
+        <h2>Generación de Reportes</h2>
+        <form id="report-form" action="#" method="post">
+            <label for="fecha_inicio">Fecha de Inicio:</label>
+            <input type="date" id="fecha_inicio" name="fecha_inicio" required style="width: auto;">
+
+            <label for="fecha_fin" >Fecha de Fin:</label>
+            <input type="date" id="fecha_fin" name="fecha_fin" required style="width: auto;">
+
+            <label for="tipo_reporte" >Tipo de Reporte:</label>
+            <select name="tipo_reporte" id="tipo_reporte" required>
+                <option value="">Seleccione una opción</option>
+                <option value="ventas">Reporte de Ventas</option>
+                <option value="inventario">Reporte de Inventario</option>
+                <option value="clientes">Reporte de Clientes</option>
+            </select>
+
+            <input type="submit" value="Generar Reporte">
+        </form>
+
+        <div id="report-result-ventas" class="report-result">
+            <h3>Reporte de Juan Perez</h3>
+            <p>Datos simulados del reporte de ventas:</p>
+            <ul>
+                <li>
+                    Cliente:
+                    <ul>
+                      <li>Nombre: Juan Pérez</li>
+                    </ul>
+                    Mascota:
+                    <ul>
+                      <li>Nombre: Luna</li>
+                      <li>Tipo: Perro</li>
+                      <li>Raza: Labrador Retriever</li>
+                      <li>Edad: 4 años</li>
+                      <li>Peso: 20 kg</li>
+                      <li>Color: Negro</li>
+                      <li>Última Visita: 2023-07-15</li>
+                    </ul>
+                    Veterinario:
+                    <ul>
+                      <li>Nombre: Dr. Carlos Gómez</li>
+                      <li>Especialidad: Veterinario General</li>
+                      <li>Teléfono: 1234567890</li>
+                      <li>Correo: carlos.gomez@example.com</li>
+                    </ul>
+                    Descripción del Reporte:
+                    <ul>
+                      <li>Luna ha estado mostrando síntomas de malestar estomacal y falta de apetito. Se le realizó un examen físico y se le prescribió un tratamiento para el malestar digestivo.</li>
+                    </ul>
+                    Estado de la Orden:
+                    <ul>
+                      <li>En proceso</li>
+                    </ul>
+                  </li>
+            </ul>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="print-button" href="#" onclick="printContent('report-result-clientes')">Imprimir PDF</a>
+        </div>
+        
+        <div id="report-result-inventario" class="report-result">
+            <h3>Reporte de Maria Rodríguez</h3>
+            <p>Datos simulados del reporte de inventario:</p>
+            <ul>
+                <li>
+                    Cliente:
+                    <ul>
+                      <li>Nombre: María Rodríguez</li>
+                    </ul>
+                    Mascota:
+                    <ul>
+                      <li>Nombre: Max</li>
+                      <li>Tipo: Gato</li>
+                      <li>Raza: Siamés</li>
+                      <li>Edad: 2 años</li>
+                      <li>Peso: 5 kg</li>
+                      <li>Color: Marrón y blanco</li>
+                      <li>Última Visita: 2023-08-10</li>
+                    </ul>
+                    Veterinario:
+                    <ul>
+                      <li>Nombre: Dra. Laura Martínez</li>
+                      <li>Especialidad: Veterinaria de Animales Pequeños</li>
+                      <li>Teléfono: 9876543210</li>
+                      <li>Correo: laura.martinez@example.com</li>
+                    </ul>
+                    Descripción del Reporte:
+                    <ul>
+                      <li>Max ha presentado síntomas de alergias cutáneas. Se le realizaron pruebas y se le indicó un tratamiento para aliviar las molestias.</li>
+                    </ul>
+                    Estado de la Orden:
+                    <ul>
+                      <li>Finalizado</li>
+                    </ul>
+                  </li>
+                  
+            </ul>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="print-button" href="#" onclick="printContent('report-result-clientes')">Imprimir PDF</a>
+        </div>
+        
+        <div id="report-result-clientes" class="report-result">
+            <h3>Reporte de Roberto Sanchez</h3>
+            <p>Datos simulados del reporte de clientes:</p>
+            <ul>
+                <li>
+                    Cliente:
+                    <ul>
+                      <li>Nombre: Roberto Sánchez</li>
+                    </ul>
+                    Mascota:
+                    <ul>
+                      <li>Nombre: Rocky</li>
+                      <li>Tipo: Perro</li>
+                      <li>Raza: Bulldog Francés</li>
+                      <li>Edad: 3 años</li>
+                      <li>Peso: 12 kg</li>
+                      <li>Color: Blanco y marrón</li>
+                      <li>Última Visita: 2023-09-05</li>
+                    </ul>
+                    Veterinario:
+                    <ul>
+                      <li>Nombre: Dr. Eduardo Ramírez</li>
+                      <li>Especialidad: Ortopedia Veterinaria</li>
+                      <li>Teléfono: 5551234567</li>
+                      <li>Correo: eduardo.ramirez@example.com</li>
+                    </ul>
+                    Descripción del Reporte:
+                    <ul>
+                      <li>Rocky ha sufrido una torcedura en una de sus patas traseras. Se le realizó un examen radiológico y se le brindó un tratamiento para recuperarse.</li>
+                    </ul>
+                    Estado de la Orden:
+                    <ul>
+                      <li>En proceso</li>
+                    </ul>
+                  </li>
+                </ul>
+            </ul>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="print-button" href="#" onclick="printContent('report-result-clientes')">Imprimir PDF</a>
+        </div>
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Menú_Pri.html"><button class="button" onclick="goBack()">Volver</button></a>
+    </div>
+    <script src="javaScript/report.js"></script>
+    <br><br><br><br><br><br><br>
+    <table border= "0" width="100%" align="center" class="fond">
+        <tr>
+            <td colspan= "1">
+                <footer class="footer">
+                    <section >
+                        <section >
+                            <aside>
+                                <p>&nbsp; </p>
+                                <p>&copy; 2023. Reservados todos los derechos. Pet's Hospital.</p>
+                                <p>Elaborado por    : René Herrería, Jean Piere Garnica, Deyaneira Vizuete, Katherine Guanoliusa</p>
+                            </aside><!-- end of #fourth footer segment -->
+                        </section><!-- end of footer-outer-block -->
+                    </section><!-- end of footer-area -->
+                    <br>
+                <br>
+                </footer>
+            </td>
+        </tr>
+    </table> 
+</body>
+</html>

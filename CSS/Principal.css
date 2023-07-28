@@ -1,0 +1,49 @@
+
+body{
+    background: linear-gradient(rgba(163, 171, 192, 0.8),rgba(163, 171, 192, 0.8)), url(../Imágenes/fondo2_.webp) ; /* Darle fondo al cuerpo */
+    background-size: cover; /*Tamaño a la imagen */
+    font-family: sans-serif; /* Estilo a las letras */
+    height: 100vh;
+}
+.slider li{
+    width: 100%;
+    list-style: none; /*Quitamos las viñetas */
+}
+.fond{
+    background: url(../Imágenes/fondoprin..jpg);
+}
+footer p{
+    color: white
+}
+.Format{
+    border-radius: 40%;
+}
+h1{
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.dis h1{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(44, 13, 167);
+
+}
+.boton{
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.boton1::after{
+background-color: brown;
+}
+
+
+

@@ -1,0 +1,128 @@
+TABLAS PARA INGRESO DE DATOS
+<head>
+            <title>Actualización de Datos del Paciente</title>
+            <style>
+              body {
+                font-family: Arial, sans-serif;
+                margin: 20px;              
+              }
+    .container {
+        display: flex;
+      justify-content: center;
+    }
+
+    .custom-table {
+      width: 80%;
+      max-width: 600px;
+      border-collapse: collapse;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-left: auto;
+        margin-right: auto;
+    }
+
+    .custom-table th, .custom-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .custom-table th {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .custom-table input[type="text"],
+    .custom-table input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .custom-table input[type="submit"] {
+      width: 100%;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px 0;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .custom-table input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .error-message {
+      color: red;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form onsubmit="return validarFormulario()">
+      <table class="custom-table">
+        <tr>
+          <th colspan="2">Actualización de Datos del Paciente</th>
+        </tr>
+        <tr>
+          <td><label for="nombre">Nombre:</label></td>
+          <td><input type="text" id="nombre" name="nombre" required required placeholder="Ingrese su nombre aquí" required disabled></td>
+        </tr>
+        <tr>
+          <td><label for="edad">Edad:</label></td>
+          <td><input type="text" id="edad" name="edad" required></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="email" id="email" name="email" required></td>
+        </tr>
+        <tr>
+          <td><label for="telefono">Teléfono:</label></td>
+          <td><input type="text" id="telefono" name="telefono" required></td>
+        </tr>
+        <tr>
+          <td><label for="direccion">Dirección:</label></td>
+          <td><input type="text" id="direccion" name="direccion" required></td>
+        </tr>
+        <tr>
+          <td><label for="enfermedad">Enfermedad:</label></td>
+          <td><input type="text" id="enfermedad" name="enfermedad" required></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="submit" value="Actualizar Datos">
+            <p class="error-message" id="error-message"></p>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
+  <script>
+    function validarFormulario() {
+      var nombre = document.getElementById("nombre").value;
+      var edad = document.getElementById("edad").value;
+      var email = document.getElementById("email").value;
+      var telefono = document.getElementById("telefono").value;
+      var direccion = document.getElementById("direccion").value;
+      var enfermedad = document.getElementById("enfermedad").value;
+      var errorMessage = document.getElementById("error-message");
+
+      if (nombre === "" || edad === "" || email === "" || telefono === "" || direccion === "" || enfermedad === "") {
+        errorMessage.textContent = "Por favor, completa todos los campos.";
+        return false;
+      }
+
+      errorMessage.textContent = "";
+      return true;
+    }
+  </script>
+</body>
+    </table>

@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../Imágenes/fondo_log.webp) no-repeat center top; /* Darle fondo al cuerpo */
+    background-size: cover; /*Tamaño a la imagen */
+    font-family: sans-serif; /* Estilo a las letras */
+    height: 100vh;
+}
+.login_box{
+    width: 320px;
+    height: 420px; /*Tamaños*/
+    background: linear-gradient(rgba(5,7,12,0.80),rgba(5,7,12,0.80)), url(../Imágenes/fondo2_.webp) 
+    no-repeat center fixed; /*Color de fondo */
+    background-size: cover;
+    color: white; /* Color a las letras */
+    top: 50%;
+    left: 50%; /*Para darle tamaño a la izquierda */
+    position: absolute; /* Para mover el cuadro */
+    transform: translate(-50%,-50%); /* Para centrar el cuadro */
+    box-sizing: border-box; /*Asignacion de bordes*/
+    padding: 70px 30px;
+}
+.login_box .log{
+    width: 100px;
+    height: 100px;
+    border-radius: 60%; /* Para poner esquinas onduladas */
+    position: absolute; /* Pra que se ubique al frente del cuadro */
+    top: -50px;
+    left: calc(50% - 50px);
+}
+.login_box h1{
+    margin: 0;
+    padding: 0 0 20px; /* Para que me de un espaciado hacia abajo */
+    text-align: center; /* Centrar el texto */
+    font-size: 22px;
+    color: white;
+}
+
+.login_box label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold; /* Para que se ponga Negrita */
+    display:block; /* Para que se ponga en una sola linea */
+}
+.login_box input{
+    width: 100%; /* Para darle un espaciado en cada celda */
+    margin-bottom: 20px; /*darle un espaciado con el boton */
+
+}
+.login_box input[type="text"],
+.login_box input[type="password"]{
+    border: none; /*Quitar el Borde */
+    border-bottom: 1px solid #fff;
+    background: transparent; /* Para poner transparente las bandejas de texto */
+    outline:  none;
+    height: 40px; /* Alto */
+    color: #fff; /* Color a las letras de las celdas */
+    font-size: 15px; /* Tamaño de letra */
+}
+.login_box button{
+    border: none; /*Quitar el Borde */
+    border-radius: 20px; /*Redondear las esquinas */
+    background: skyblue; /* Para poner transparente las bandejas de texto */
+    height: 40px; /* Alto */
+    color: #000; /* Color a las letras de las celdas */
+    font-size: 12px; /* Tamaño de letra */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+header{
+    text-align: center;
+}
+.login_box a{
+    text-decoration: none; /* quitar decoraciòn de la etiqueta */
+    font-size: 11px;
+    line-height: 20px; /*Linea de espaciado*/
+    color: darkgray;
+}
+.login_box a:hover{
+    color: white; /*Cambiar de color cuado el cursor está encima */
+}
+.login_box buttons{
+    color: white;
+}
+.content {
+    min-height: calc(100vh - 100px); /* Altura del contenido principal, dejando espacio para el pie de página */
+    /* Otros estilos del contenido principal, si es necesario */
+}
+.footer {
+    position: fixed; /* Posición fija para que siempre esté en la parte inferior */
+    bottom: 0; /* Alineación en la parte inferior */
+    left: 0; /* Alineación a la izquierda */
+    width: 100%; /* Ancho del 100% para ocupar todo el ancho de la ventana */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+.button {
+    padding: 6px 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,78 @@
+
+.login_box{
+    width:800 px;
+    height: 730px; /*Tamaños*/
+    background: linear-gradient(rgba(5,7,12,0.80),rgba(5,7,12,0.80)), 
+    no-repeat center fixed; /*Color de fondo */
+    background-size: cover;
+    color: white; /* Color a las letras */
+    top: 50%;
+    left: 50%; /*Para darle tamaño a la izquierda */
+    position: absolute; /* Para mover el cuadro */
+    transform: translate(-50%,-43%);  /*Para centrar el cuadro */
+    box-sizing: border-box; /*Asignacion de bordes*/
+    padding: 50px 20px;
+}
+.login_box .log{
+    width: 110px;
+    height: 90px;
+    border-radius: 60%; /* Para poner esquinas onduladas */
+    position: absolute; /* Pra que se ubique al frente del cuadro */
+    top: -45px;
+    left: calc(50% - 50px);
+}
+.login_box h1{
+    margin: 0;
+    padding: 0 0 20px; /* Para que me de un espaciado hacia abajo */
+    text-align: center; /* Centrar el texto */
+    font-size: 22px;
+    color: white;
+}
+
+.login_box label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold; /* Para que se ponga Negrita */
+    display:block; /* Para que se ponga en una sola linea */
+}
+.login_box input{
+    width: 100%; /* Para darle un espaciado en cada celda */
+    margin-bottom: 20px; /*darle un espaciado con el boton */
+
+}
+.login_box input[type="text"],
+.login_box input[type="password"]{
+    border: none; /*Quitar el Borde */
+    border-bottom: 1px solid #fff;
+    background: transparent; /* Para poner transparente las bandejas de texto */
+    outline:  none;
+    height: 100px; /* Alto */
+    color: #fff; /* Color a las letras de las celdas */
+    font-size: 15px; /* Tamaño de letra */
+}
+.login_box button{
+    border: none; /*Quitar el Borde */
+    border-radius: 20px; /*Redondear las esquinas */
+    background: skyblue; /* Para poner transparente las bandejas de texto */
+    height: 40px; /* Alto */
+    color: #000; /* Color a las letras de las celdas */
+    font-size: 12px; /* Tamaño de letra */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+header{
+    text-align: center;
+}
+.login_box a{
+    text-decoration: none; /* quitar decoraciòn de la etiqueta */
+    font-size: 30px;
+    line-height: 20px; /*Linea de espaciado*/
+    color: darkgray;
+}
+.login_box a:hover{
+    color: white; /*Cambiar de color cuado el cursor está encima */
+}
+.login_box buttons{
+    color: white;
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="sp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/Menú.css">
+    <link rel="stylesheet" href="CSS/Principal.css">
+    <link rel="stylesheet" href="CSS/Diseño_Tablas.css">
+    <link rel="stylesheet" href="CSS/btn.css">
+    <title>Añadir Medico</title>
+    
+  </head>
+  <body>
+    <table border="0" width="100%" align="center" class="fond">
+      <tr>
+        <td colspan="1" align="left">
+          <br />
+          <img
+            src="Imágenes/Logo.png"
+            width="100px"
+            height="100px"
+            class="img8"
+          />
+        </td>
+        <td align="right">
+            <div>
+              <a href="index.html">
+                <button class="button1">Cerrar Sesión</button>
+              </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+          </td>
+      </tr>
+    </table>
+    <hr>
+    <table border="0" width="100%" align="center">
+      <tr>
+        <td colspan="1" align="center">
+          <br />
+          <h1>PET'S HOSPITAL - AÑADIR MEDICO</main></h1>
+          <br />
+        </td>
+      </tr>
+    </table>
+    <table width='50%'  border='0' cellspacing='0'  cellpadding='0' align='center' bgcolor="#4682B4"> 
+        <tr>
+            <th  colspan='4'>
+                <p align="center" class="Estilo2">
+                    Ingreso de Datos 
+                </p> 
+            </th>
+        </tr>
+        <tr bgcolor='white'> 
+            <th width='20%' align="right">
+                <span class='Estilo3'>
+                    Código:
+                </span>
+            </th>
+            <th width="2%"  align="center">
+                &nbsp;
+            </th>
+            <th width="2px">
+                &nbsp;
+            </th>
+            <th  align="left" width="78%">
+                <input type='text' name='codigo' size='10' maxlength='20' readonly="yes" style="background-color:#cccccc">
+            </th>
+        </tr>
+        <tr bgcolor='white'>
+            <th align="right">
+                <span class='Estilo3'>
+                    Cedula:
+                </span>
+            </th>
+            <th width="4%"  align="center">
+                <span class='Estilo6'>
+                    *
+                </span>
+            </th>
+            <th width="10px">
+                &nbsp;
+            </th>
+            <th  align="left" width="78%">
+                <input type='text' name='agenda_hora' size='15' maxlength='15' required placeholder="+17********">
+            </th>
+        </tr>
+        <tr bgcolor='white'>
+            <th align="right">
+                <span class='Estilo3'>
+                    Nombres:
+                </span>
+            </th>
+            <th width="2%"  align="center">
+                <span class='Estilo6'>
+                    *
+                </span>
+            </th>
+            <th width="2px">
+                &nbsp;
+            </th>
+            <th  align="left" width="78%">
+                <input type='text' name='agenda_hora' size='15 ' maxlength='5' required placeholder="Nombres">
+            </th>
+        </tr>
+        <tr bgcolor='white'>
+            <th align="right">
+                <span class='Estilo3'>
+                    Telefono:
+                </span>
+            </th>
+            <th width="4%"  align="center">
+                <span class='Estilo6'>
+                    *
+                </span>
+            </th>
+            <th width="10px">
+                &nbsp;
+            </th>
+            <th  align="left" width="78%">
+                <input type='text' name='agenda_hora' size='15' maxlength='15' required placeholder="+593 ">
+            </th>
+        </tr>
+        <tr bgcolor='white'>
+            <th align="right">
+                <span class='Estilo3'>
+                    Especialidad:
+                </span>
+            </th>
+            <th width="1%"  align="center">
+                <span class='Estilo6'>
+                    *
+                </span>
+            </th>
+            <th >
+                &nbsp;
+            </th>
+            <th  align="left">
+                <select name="id_med" id="id_med" style="width: 300px;">
+                    <option value="">Escoja > </option>
+                    <option value="Especialidad">1. Esp. Cirugia</option>
+                    <option value="Especialidad">2. Esp. Mamiferos</option>
+                    <option value="Especialidad">3. Esp. Aves</option>
+                    <option value="Especialidad">4. Esp. Mascotas</option> 
+                </select>                 
+            </th>
+        </tr>
+        <tr bgcolor='white'> 
+            <th align="right"><span class='Estilo3'>
+                Edad:
+            </span></th>
+            <th width="2%"  align="center">
+                <span class='Estilo6'>
+                    *
+                </span>
+            </th>
+            <th width="2px">
+                &nbsp;
+            </th>
+            <th  align="left" width="78%">
+                <input type='text' name='agenda_fecha'  id='agenda_fecha' value="" size='3' maxlength="2" required placeholder="+++">
+            </th>
+        </tr>
+        <tr bgcolor='white'> 
+            <th align="right"><span class='Estilo3'>
+                Correo:
+            </span></th>
+            <th width="2%"  align="center">
+                <span class='Estilo6'>
+                    *
+                </span>
+            </th>
+            <th width="2px">
+                &nbsp;
+            </th>
+            <th  align="left" width="78%">
+                <input type='email' name='agenda_fecha'  id='agenda_fecha' value="" size='40' maxlength="40" required required placeholder="example@correo.com">
+            </th>
+        </tr>
+        <tr bgcolor='#FFFAF0'>
+            <td  colspan="4" >
+                <br>
+                <table class="button-table" bgcolor="#FFFAF0" >
+                    <tr>
+                        <td colspan="4">
+                            <br>
+                            <table class="button-container" align="center">
+                                <tr>
+                                    <td class="spacer-cell"></td>
+                                    <td class="button-cell">
+                                        <a href="Medicos.html" title="Guardar">
+                                            <input type="submit" value="Guardar">
+                                        </a>
+                                    </td>
+                                    <td class="spacer-cell">&nbsp;</td>
+                                    <!-- Más botones aquí -->
+                                    <td class="button-cell">
+                                        <a href="Medicos.html" title="Cancelar">
+                                            <input type="submit" value="Cancelar">
+                                        </a>
+                                    </td>
+                                    <td class="spacer-cell">&nbsp;</td>
+                                    <!-- Más botones aquí -->
+                                    <td class="button-cell">
+                                        <a href="Menú_Pri.html" title="Salir">
+                                            <input type="submit" value="Salir">
+                                        </a>
+                                    </td>
+                                    <td class="spacer-cell">&nbsp;</td>
+                                </tr>
+                            </table>
+                            <br>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+            </td>
+        </tr>
+    </table>
+    <br>
+    
+    <br>
+    <table border="0" width="100%" align="center" class="fond">
+    <tr>
+        <td colspan="1">
+            <footer align = "center">
+                <section >
+                    <section >
+                        <aside>
+                            <p>&nbsp; </p>
+                            <p>&copy; 2023. Reservados todos los derechos. Pet's Hospital.</p>
+                            <p>Elaborado por: René Herrería, Jean Piere Garnica, Deyaneira Vizuete, Katherine Guanoluisa</p>
+                        </aside>
+                    </section>
+                </section>
+                <br>
+                <br>
+            </footer>
+
+        </td>
+    </tr>
+</table> 
+</body>
+</html>

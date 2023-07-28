@@ -1,0 +1,106 @@
+/* darle estilo al mení */
+#header{
+    margin: auto; /*Centrado*/
+    width: 510px; /*Tamaño */
+    font-family: Arial, Helvetica, sans-serif; /*Tipo de letra */
+}
+
+ul, ol{
+    list-style: none; /* Para que desaparezcan las viñetas */
+}
+.nav li a{
+    background: linear-gradient(30deg, #43e97b,#38f9d7); /*Color del marco */
+    color: black; /*color de la palabra */
+    text-decoration: none; /*Quitae el subrayado */
+    padding: 10px 18px; /*acomodar */
+    display: block; /*darle un espaciado */
+}
+
+/* estilo cuando se ponga el puntero encima del menú */
+
+.nav li a:hover{
+    background-color:#434343 ; /*Color del marco */
+}
+
+/*Los li directos que estén dentro del nav */
+.nav > li{
+    float: left; /*ponerle en forma de menú*/
+}
+
+.nav li ul{
+    display: none; /* Todos los submenús desaparece*/
+    position: absolute; /* Conforme al menú*/
+    min-width: 140px;
+}
+/*">" significa que sea directo a */
+.nav li:hover > ul{
+    display: block; /* para que aparezcan los submenús */
+}
+.nav li ul li{
+    position: relative;
+}
+.nav li ul li ul{
+    right: -130px; /*Para pasarle al lado derecho los submenús de los submenus */
+    top: 0px;
+}
+
+/* Diseño a la imagen */
+
+.ig{
+    border-radius: 10%;
+}
+.button1 {
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #880000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button1:hover {
+    background-color: #880000;
+}
+.button {
+    padding: 6px 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/*NOTIFICATION*/
+.notification1 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.notification1.show {
+    display: block;
+    animation: fadeOut 3s forwards;
+    -webkit-animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

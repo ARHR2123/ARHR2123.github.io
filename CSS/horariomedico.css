@@ -1,0 +1,8 @@
+body{
+    margin:0;
+    padding:0;
+    background: url(../Imágenes/fondoimg.jpg) no-repeat center top; /* Darle fondo al cuerpo */
+    background-size: cover; /*Tamaño a la imagen */
+    font-family: sans-serif; /* Estilo a las letras */
+    height: 10px;
+}

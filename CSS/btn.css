@@ -1,0 +1,102 @@
+.button.with-border.with-shadow {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+/* Estilo para la tabla de botones */
+
+
+
+/* Estilo para las celdas que contienen botones */
+.button-cell {
+  width:  25px;
+}
+
+/* Estilo para las celdas espaciadoras */
+.spacer-cell {
+  width: 45px;
+}
+
+/* Estilos para los botones */
+input[type="submit"] {
+  padding: 8px 16px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+/* Estilo para los botones al pasar el cursor sobre ellos */
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Estilo para los enlaces dentro de los botones */
+.button-cell a {
+  text-decoration: hotpink;
+  color: inherit;
+}
+/* Estilos para la tabla de datos */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Estilo para la celda encabezado */
+.data-header {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Estilo para las filas de datos */
+.data-row {
+  background-color: white;
+}
+
+/* Estilos para las etiquetas de los datos */
+.data-label {
+  font-weight: bold;
+  color: #555;
+}
+
+/* Estilos para los campos de entrada de datos */
+.data-input {
+  padding: 3px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+  width: 100%;
+}
+
+/* Estilos para los campos de selección */
+select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+  width: 100%;
+}
+
+/* Estilos para las etiquetas de ejemplo */
+.Estilo5 {
+  font-size: 12px;
+  color: #777;
+}
+/* Estilo para los botones azules */
+.blue-button {
+  padding: 10px 35px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
