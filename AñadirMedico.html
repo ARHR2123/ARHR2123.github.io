@@ -10,6 +10,49 @@
     <title>Añadir Medico</title>
     
   </head>
+  <script>
+    function SoloLetras(e)
+    {
+      key = e.keyCode || e.which;
+      tecla = String.fromCharCode(key).toString();
+      letras ="QWERTYUIOPASDFGHJKLÑZXCVBNMqwertyuiopasdfghjklñzxcvbnmíóúéáÉÚÍÓÁ"
+
+      especiales = [8,13]
+      tecla_especial = false
+      for(var i in especiales){
+        if(key == especiales[i]){
+          tecla_especial = true;
+          break;
+        }
+      }
+      if(letras.indexOf(tecla) == -1 && !tecla_especial){
+        alert("** Ingrese solo letras por favor **")
+        return false;
+      }
+    }
+
+    function SoloNumeros(evt)
+    {
+      if(window.event)
+      {
+        keynum = evt.keyCode;
+
+      }
+      else{
+        keynum = evt.which;
+
+      }
+      if((keynum > 47 && keynum < 58) || keynum == 8 || keynum == 13){
+        return false;
+      }
+      else{
+        alert("** Ingrese solo numeros por favor **")
+        return false;
+
+      }
+
+    }
+  </script>
   <body>
     <table border="0" width="100%" align="center" class="fond">
       <tr>
@@ -81,7 +124,7 @@
                 &nbsp;
             </th>
             <th  align="left" width="78%">
-                <input type='text' name='agenda_hora' size='15' maxlength='15' required placeholder="+17********">
+                <input type='text' name='agenda_hora' size='15' maxlength='10' required placeholder="+17********" >
             </th>
         </tr>
         <tr bgcolor='white'>
@@ -99,7 +142,7 @@
                 &nbsp;
             </th>
             <th  align="left" width="78%">
-                <input type='text' name='agenda_hora' size='15 ' maxlength='5' required placeholder="Nombres">
+                <input type='text' name='agenda_hora' size='15 ' required placeholder="Nombres" onkeypress="return SoloLetras(event);" required>
             </th>
         </tr>
         <tr bgcolor='white'>
@@ -117,7 +160,7 @@
                 &nbsp;
             </th>
             <th  align="left" width="78%">
-                <input type='text' name='agenda_hora' size='15' maxlength='15' required placeholder="+593 ">
+                <input type='text' name='agenda_hora' size='15' maxlength='10' required placeholder="+593 ">
             </th>
         </tr>
         <tr bgcolor='white'>
@@ -157,7 +200,7 @@
                 &nbsp;
             </th>
             <th  align="left" width="78%">
-                <input type='text' name='agenda_fecha'  id='agenda_fecha' value="" size='3' maxlength="2" required placeholder="+++">
+                <input type='number' name='agenda_fecha'  id='agenda_fecha' value="" size='3' maxlength="2" required placeholder="+++" onkeypress="return SoloNumeros(event);" required>
             </th>
         </tr>
         <tr bgcolor='white'> 

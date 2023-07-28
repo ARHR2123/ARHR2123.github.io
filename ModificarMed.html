@@ -95,11 +95,54 @@
       margin-bottom: 5px;
     }
   </style>
+  <script>
+    function SoloLetras(e)
+    {
+      key = e.keyCode || e.which;
+      tecla = String.fromCharCode(key).toString();
+      letras ="QWERTYUIOPASDFGHJKLÑZXCVBNMqwertyuiopasdfghjklñzxcvbnmíóúéáÉÚÍÓÁ"
+
+      especiales = [8,13]
+      tecla_especial = false
+      for(var i in especiales){
+        if(key == especiales[i]){
+          tecla_especial = true;
+          break;
+        }
+      }
+      if(letras.indexOf(tecla) == -1 && !tecla_especial){
+        alert("** Ingrese solo letras por favor **")
+        return false;
+      }
+    }
+
+    function SoloNumeros(evt)
+    {
+      if(window.event)
+      {
+        keynum = evt.keyCode;
+
+      }
+      else{
+        keynum = evt.which;
+
+      }
+      if((keynum > 47 && keynum < 58) || keynum == 8 || keynum == 13){
+        return false;
+      }
+      else{
+        alert("** Ingrese solo numeros por favor **")
+        return false;
+
+      }
+
+    }
+  </script>
 </head>
 <body>
   <div class="container">
     <form onsubmit="return validarFormulario()">
-      <table class="custom-table">
+      <table class="custom-table" bgcolor="white">
         <tr>
           <th colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Actualización de Datos de la Mascota</th>
         </tr>
@@ -113,7 +156,7 @@
         </tr>
         <tr>
           <td><label>Nombre:</label></td>
-          <td><input type="text" name="Nombre" required placeholder="Nombre" required></td>
+          <td><input type="text" name="Nombre" required placeholder="Nombre" onkeypress="return SoloLetras(event);" required></td>
         </tr>
         <tr>
           <td><label>Tipo Mascota:</label></td>
@@ -129,7 +172,7 @@
         </tr>
         <tr>
           <td><label>Edad:</label></td>
-          <td><input type="text" name="Edad" required placeholder="Edad" required></td>
+          <td><input type="number" name="Edad" size="3" required placeholder="Edad" maxlength="2"></td>
           <tr>
             <td><label>Raza Mascota:</label></td>
             <td>
@@ -155,7 +198,7 @@
         </tr>
         <tr>
           <td><label for="enfermedad">Propietario:</label></td>
-          <td><input type="text" id="enfermedad" name="Propietario" required required placeholder="Dueño de la mascota"></td>
+          <td><input type="text" id="enfermedad" name="Propietario" required required placeholder="Dueño de la mascota" onkeypress="return SoloLetras(event);" required></td>
         </tr>
         <tr>
           <td colspan="4">

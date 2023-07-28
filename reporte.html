@@ -45,111 +45,142 @@
             <label for="tipo_reporte" >Tipo de Reporte:</label>
             <select name="tipo_reporte" id="tipo_reporte" required>
                 <option value="">Seleccione una opción</option>
-                <option value="ventas">Reporte de Ventas</option>
-                <option value="inventario">Reporte de Inventario</option>
+                <option value="OT">Reporte de Orden de Trabajo</option>
+                <option value="NMas">Reporte de Número de Mascotas</option>
                 <option value="clientes">Reporte de Clientes</option>
             </select>
 
             <input type="submit" value="Generar Reporte">
         </form>
 
-        <div id="report-result-ventas" class="report-result">
-            <h3>Reporte de Juan Perez</h3>
-            <p>Datos simulados del reporte de ventas:</p>
-            <ul>
-                <li>
-                    Cliente:
-                    <ul>
-                      <li>Nombre: Juan Pérez</li>
-                    </ul>
-                    Mascota:
-                    <ul>
-                      <li>Nombre: Luna</li>
-                      <li>Tipo: Perro</li>
-                      <li>Raza: Labrador Retriever</li>
-                      <li>Edad: 4 años</li>
-                      <li>Peso: 20 kg</li>
-                      <li>Color: Negro</li>
-                      <li>Última Visita: 2023-07-15</li>
-                    </ul>
-                    Veterinario:
-                    <ul>
-                      <li>Nombre: Dr. Carlos Gómez</li>
-                      <li>Especialidad: Veterinario General</li>
-                      <li>Teléfono: 1234567890</li>
-                      <li>Correo: carlos.gomez@example.com</li>
-                    </ul>
-                    Descripción del Reporte:
-                    <ul>
-                      <li>Luna ha estado mostrando síntomas de malestar estomacal y falta de apetito. Se le realizó un examen físico y se le prescribió un tratamiento para el malestar digestivo.</li>
-                    </ul>
-                    Estado de la Orden:
-                    <ul>
-                      <li>En proceso</li>
-                    </ul>
-                  </li>
-            </ul>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="print-button" href="#" onclick="printContent('report-result-clientes')">Imprimir PDF</a>
+        <div id="report-result-OT" class="report-result">
+          <td colspan="1" align="center">
+            <hr>
+            <h3 align="center">ORDENES DE TRABAJO</h3>
+            <br>
+            <p>Datos simulados del reporte de la Orden de Trabajo:</p>
+          </td>
+          <br>
+          <table border="0" width="100%">
+            <tr>
+              <td align="center">
+                <label>Número de orden:</label>
+                <p>15</p>
+              </td>
+              <td>&nbsp;</td>
+              <td align="center">
+                <label>Folio:</label>
+                <p>4578</p>
+              </td>
+            </tr>
+          </table>
+          <table border="0" width="100%">
+            <tr>
+              <td colspan='3'>
+                <li><label>Veterinario:</label></li>
+                  <ul>
+                    <li>Nombre: Dr. Carlos Gómez</li>
+                    <li>Especialidad: Veterinario General</li>
+                    <li>Teléfono: 1234567890</li>
+                    <li>Correo: carlos.gomez@example.com</li>
+                  </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <li><label>Cliente:</label></li>
+              </td>
+              <td>&nbsp;</td>
+              <td>
+                <p>Juan Pérez</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <li><label>Servicio:</label></li>
+              </td>
+              <td>&nbsp;</td>
+              <td >
+                <p > Diagnóstico del sistema digestivo</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <li><label>Descripción:</label></li>
+              </td>
+              <td>&nbsp;</td>
+              <td >
+                <p >Luna ha estado mostrando síntomas de malestar estomacal y falta de apetito.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <li><label>Observaciones:</label></li>
+              </td>
+              <td>&nbsp;</td>
+              <td >
+                <p >Se le realizó un examen físico y se le prescribió un tratamiento para el malestar digestivo.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <li><label>Estado:</label></li>
+              </td>
+              <td>&nbsp;</td>
+              <td >
+                <p >En Proceso...</p>
+              </td>
+            </tr>
+          </table>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="print-button" href="#" onclick="printContent('report-result-OT')">Imprimir PDF</a>
         </div>
         
-        <div id="report-result-inventario" class="report-result">
-            <h3>Reporte de Maria Rodríguez</h3>
-            <p>Datos simulados del reporte de inventario:</p>
+        <div id="report-result-NMas" class="report-result">
+            <h3 align="center">Reporte de las máscotas atendidas en un día</h3>
+            <p>Datos simulados del reporte de número de mascotas atendidas en un día:</p>
             <ul>
                 <li>
-                    Cliente:
+                  <label>Mascota:</label> 
                     <ul>
-                      <li>Nombre: María Rodríguez</li>
+                      <label for="fecha_inicio">Escoja la fecha: </label>
+                    <input type="date" id="fecha_inicio" name="fecha_inicio" required style="width: auto;">
+                    <br>
+                    <br>
+                      <label>Número de mascotas atendidas: </label> 
+                      <li>50</li>
                     </ul>
-                    Mascota:
-                    <ul>
-                      <li>Nombre: Max</li>
-                      <li>Tipo: Gato</li>
-                      <li>Raza: Siamés</li>
-                      <li>Edad: 2 años</li>
-                      <li>Peso: 5 kg</li>
-                      <li>Color: Marrón y blanco</li>
-                      <li>Última Visita: 2023-08-10</li>
-                    </ul>
-                    Veterinario:
-                    <ul>
-                      <li>Nombre: Dra. Laura Martínez</li>
-                      <li>Especialidad: Veterinaria de Animales Pequeños</li>
-                      <li>Teléfono: 9876543210</li>
-                      <li>Correo: laura.martinez@example.com</li>
-                    </ul>
-                    Descripción del Reporte:
-                    <ul>
-                      <li>Max ha presentado síntomas de alergias cutáneas. Se le realizaron pruebas y se le indicó un tratamiento para aliviar las molestias.</li>
-                    </ul>
-                    Estado de la Orden:
+                    <br>
+                    <label>Estado de la Orden:</label> 
                     <ul>
                       <li>Finalizado</li>
                     </ul>
                   </li>
-                  
             </ul>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="print-button" href="#" onclick="printContent('report-result-clientes')">Imprimir PDF</a>
+            <a class="print-button" href="#" onclick="printContent('report-result-NMas')">Imprimir PDF</a>
         </div>
         
         <div id="report-result-clientes" class="report-result">
-            <h3>Reporte de Roberto Sanchez</h3>
+            <h3 align="center">Reporte de Roberto Sanchez</h3>
             <p>Datos simulados del reporte de clientes:</p>
             <ul>
                 <li>
-                    Cliente:
+                  <label>Cliente:</label>
+                  <br>
                     <ul>
                       <li>Nombre: Roberto Sánchez</li>
                     </ul>
-                    Mascota:
+                    <br>
+                    <label>Mascota:</label>
+                    <br>
                     <ul>
                       <li>Nombre: Rocky</li>
                       <li>Tipo: Perro</li>
@@ -159,18 +190,24 @@
                       <li>Color: Blanco y marrón</li>
                       <li>Última Visita: 2023-09-05</li>
                     </ul>
-                    Veterinario:
+                    <br>
+                    <label>Veterinario:</label>
+                    <br>
                     <ul>
                       <li>Nombre: Dr. Eduardo Ramírez</li>
                       <li>Especialidad: Ortopedia Veterinaria</li>
                       <li>Teléfono: 5551234567</li>
                       <li>Correo: eduardo.ramirez@example.com</li>
                     </ul>
-                    Descripción del Reporte:
+                    <br>
+                    <label>Descripción del Reporte:</label>
+                    <br>
                     <ul>
                       <li>Rocky ha sufrido una torcedura en una de sus patas traseras. Se le realizó un examen radiológico y se le brindó un tratamiento para recuperarse.</li>
                     </ul>
-                    Estado de la Orden:
+                    <br>
+                    <label>Estado de la Orden:</label>
+                    <br>
                     <ul>
                       <li>En proceso</li>
                     </ul>

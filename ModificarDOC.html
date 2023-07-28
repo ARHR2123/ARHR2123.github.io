@@ -95,11 +95,33 @@
       margin-bottom: 5px;
     }
   </style>
+  <script>
+    function SoloLetras(e)
+    {
+      key = e.keyCode || e.which;
+      tecla = String.fromCharCode(key).toString();
+      letras ="QWERTYUIOPASDFGHJKLÑZXCVBNMqwertyuiopasdfghjklñzxcvbnmíóúéáÉÚÍÓÁ"
+
+      especiales = [8,13]
+      tecla_especial = false
+      for(var i in especiales){
+        if(key == especiales[i]){
+          tecla_especial = true;
+          break;
+        }
+      }
+      if(letras.indexOf(tecla) == -1 && !tecla_especial){
+        alert("** Ingrese solo letras por favor **")
+        return false;
+      }
+    }
+  </script>
+
 </head>
 <body>
   <div class="container">
     <form onsubmit="return validarFormulario()">
-      <table class="custom-table">
+      <table class="custom-table" bgcolor="white">
         <tr>
           <th colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Actualización de Datos de Medico</th>
         </tr>
@@ -109,17 +131,17 @@
         </tr>
         <tr>
           <td><label>Cedula:</label></td>
-          <td><input type="text" name="CMAS" required placeholder="17********" required disabled></td>
+          <td><input type="text" name="CMAS" maxlength="10" required placeholder="17********" required disabled></td>
         </tr>
         <tr>
           <td><label>Nombre:</label></td>
-          <td><input type="text" name="Nombre" required placeholder="Nombre" required></td>
+          <td><input type="text" name="Nombre" required placeholder="Nombre" required onkeypress="return SoloLetras(event);" required></td>
         </tr>
         
         
         <tr>
           <td><label>Telefono:</label></td>
-          <td><input type="text" name="Telefono" required placeholder="+593" required required placeholder="17********"></td>
+          <td><input type="text" name="Telefono" maxlength="10" required placeholder="+593" required required placeholder="17********"></td>
           <tr>
             <td><label>Especialidad:</label></td>
             <td>

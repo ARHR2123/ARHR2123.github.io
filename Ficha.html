@@ -6,9 +6,10 @@
   <link rel="stylesheet" href="CSS/Ficha.css">
   <link rel="stylesheet" href="CSS/Menú.css">
   <link rel="stylesheet" href="CSS/Principal.css">
-  <title>Login</title>
+  <title>Ficha Tecnica</title>
   <title>Formulario con Tablas</title>
 </head>
+
 <body>
   <table border="0" width="100%"  align="center" class="fond">
     <tr>
@@ -31,6 +32,7 @@
       </td>
     </tr>
   </table>
+  <br>
   <div class="login_box">
     <img class="log" src="Im%C3%A1genes/registo.Mascotas.jpg" alt="registo">
     <h1>FICHA MEDICA</h1>
@@ -43,6 +45,49 @@
                 padding: 11px;
               }
     </style>
+    <script>
+      function SoloLetras(e)
+      {
+        key = e.keyCode || e.which;
+        tecla = String.fromCharCode(key).toString();
+        letras ="QWERTYUIOPASDFGHJKLÑZXCVBNMqwertyuiopasdfghjklñzxcvbnmíóúéáÉÚÍÓÁ"
+
+        especiales = [8,13]
+        tecla_especial = false
+        for(var i in especiales){
+          if(key == especiales[i]){
+            tecla_especial = true;
+            break;
+          }
+        }
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+          alert("** Ingrese solo letras por favor **")
+          return false;
+        }
+      }
+
+      function SoloNumeros(evt)
+      {
+        if(window.event)
+        {
+          keynum = evt.keyCode;
+
+        }
+        else{
+          keynum = evt.which;
+
+        }
+        if((keynum > 47 && keynum < 58) || keynum == 8 || keynum == 13){
+          return false;
+        }
+        else{
+          alert("** Ingrese solo numeros por favor **")
+          return false;
+
+        }
+
+      }
+    </script>
     <form>
       <table>
         <tr>
@@ -51,11 +96,11 @@
         </tr>
         <tr>
           <th>Nombre (Dueño):</th>
-          <td><input type="text1" name="nombred"></td>
+          <td><input type="text1" name="nombred" onkeypress="return SoloLetras(event);" required></td>
         </tr>
         <tr>
           <th>Nombre Mascota:</th>
-          <td><input type="text2" name="nombrem"></td>
+          <td><input type="text2" name="nombrem" onkeypress="return SoloLetras(event);" required></td>
         </tr>
         <tr>
           <th>Tipo Mascota:</th>
@@ -70,19 +115,20 @@
         </tr>
         <tr>
           <th>Raza:</th>
-          <td><input type="text2" name="Razam"></td>
+          <td><input type="text2" name="Razam" onkeypress="return SoloLetras(event);" required></td>
         </tr>
         <tr>
           <th>Fecha de Nacimiento Mascota:</th>
-          <td><input type="text3" name="fechana"></td>
+          <td><input type="text3" name="fechana" maxlength='10'></td>
         </tr>
         <tr>
           <th>Edad Mascota:</th>
-          <td><input type="text4" name="edadma"></td>
+          <td><input type="number" name="edadma" maxlength='2' ></td>
         </tr>
         <tr>
           <th>Género:</th>
-          <td><label><input type="radio" name="sexo" value="masculino"> &nbsp;Macho</label> <label><input type="radio" name="sexo" value="femenino">&nbsp;Hembra</label></td>
+          <td><label><input type="radio" name="Sexo" value="MASCULINO" required>Macho</label> 
+          <label><input type="radio" name="Sexo" value="FEMENINO" required>Hembra</label></td>
         </tr>
       </table>
     </form>
@@ -91,7 +137,7 @@
     &nbsp;
     <header>
       <div>
-        <a href="Menú_Pri.html" ><button class="button">Guardar</button></a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="Menú_Pri.html"><button class="button">Cancelar</button></a>
+        <a href="Pacientes.html" ><button class="button">Guardar</button></a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="Menú_Pri.html"><button class="button">Cancelar</button></a>
       </div><br>
     </header>
   </div>

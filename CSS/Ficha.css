@@ -1,12 +1,12 @@
 
 .login_box{
-    width:800 px;
+    width: 500px;
     height: 730px; /*Tamaños*/
     background: linear-gradient(rgba(5,7,12,0.80),rgba(5,7,12,0.80)), 
     no-repeat center fixed; /*Color de fondo */
     background-size: cover;
     color: white; /* Color a las letras */
-    top: 50%;
+    top: 75%;
     left: 50%; /*Para darle tamaño a la izquierda */
     position: absolute; /* Para mover el cuadro */
     transform: translate(-50%,-43%);  /*Para centrar el cuadro */

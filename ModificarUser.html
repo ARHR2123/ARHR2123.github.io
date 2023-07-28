@@ -99,7 +99,7 @@
 <body>
   <div class="container">
     <form onsubmit="return validarFormulario()">
-      <table class="custom-table">
+      <table class="custom-table" bgcolor="white">
         <tr>
           <th colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Actualización de Datos del Usuario</th>
         </tr>
@@ -113,23 +113,23 @@
         </tr>
         <tr>
           <td><label>Contraseña antigua:</label></td>
-          <td><input type="text" name="contraseña" required placeholder="ABC*****123" required disabled></td>
+          <td><input type="password" name="contraseña" required placeholder="ABC*****123" required disabled></td>
         </tr>
         <tr>
           <td><label>Contraseña Actual:</label></td>
-          <td><input type="text" name="contraseña" required placeholder="New contraseña: 123***" ></td>
+          <td><input type="password" name="contraseña" required placeholder="Nueva contraseña: 123***" ></td>
         </tr>
         <tr>
           <td><label>Nombre antiguo:</label></td>
-          <td><input type="text" name="Nombre" required placeholder="NickName Antiguo" required disabled></td>
+          <td><input type="text" name="Nombre" required placeholder="Apodo Antiguo" required disabled></td>
         </tr>
         <tr>
           <td><label>Nombre actual:</label></td>
-          <td><input type="text" name="Nombre" required placeholder="NickName Actual" required></td>
+          <td><input type="text" name="Nombre" required placeholder="Apodo Actual" required></td>
         </tr>
         <tr>
           <td><label>Telefono:</label></td>
-          <td><input type="text" name="Telefono" required placeholder="+593" required required placeholder="17********"></td>
+          <td><input type="text" name="Telefono" maxlength="10" required placeholder="+593" required required placeholder="17********"></td>
         </tr>
         <tr>
           <td><label>Sexo:</label></td>
